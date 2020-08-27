@@ -14,7 +14,7 @@ const App: React.FC = () => {
     }, []);
 
     return (
-        <ul>
+        <ul style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             {users.length === 0
                 ? (<p>Loading...</p>)
                 :

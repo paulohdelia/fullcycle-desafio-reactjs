@@ -8,7 +8,8 @@ export interface User {
     avatar: string,
 }
 
-const DisplayUser = ({ first_name, last_name, email, avatar }: User) => {
+const DisplayUser: React.FC<User> = (props) => {
+    const { avatar, email, first_name, last_name } = props;
     return (
         <li style={{ display: 'flex', alignItems: 'center', marginBottom: '16px', }}>
             <img src={avatar} alt={first_name} style={{
@@ -18,6 +19,7 @@ const DisplayUser = ({ first_name, last_name, email, avatar }: User) => {
                 marginRight: '16px',
             }} />
             <section className="info" style={{
+                width: '200px',
             }}>
                 <strong>{`${first_name} ${last_name}`}</strong>
                 <p>{email}</p>
