@@ -11,17 +11,25 @@ export interface User {
 const DisplayUser: React.FC<User> = (props) => {
     const { avatar, email, first_name, last_name } = props;
     return (
-        <li style={{ display: 'flex', alignItems: 'center', marginBottom: '16px', }}>
+        <li style={{
+            display: 'flex',
+            alignItems: 'center',
+            marginBottom: '16px',
+        }}>
             <img src={avatar} alt={first_name} style={{
                 width: '100px',
                 height: '100px',
                 borderRadius: '50%',
                 marginRight: '16px',
+                border: '3px solid var(--color-red)',
             }} />
             <section className="info" style={{
                 width: '200px',
+                color: 'var(--color-white)',
             }}>
-                <strong>{`${first_name} ${last_name}`}</strong>
+                <strong style={{ fontSize: '24px' }}>
+                    {`${first_name} ${last_name}`}
+                </strong>
                 <p>{email}</p>
             </section>
         </li>

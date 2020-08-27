@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+:root {
+    --color-red: #EA2845;
+    --color-white: #FDFFF9;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111111;
+}
